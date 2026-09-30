@@ -14,6 +14,16 @@ const categoryLabels = {
   acessorios: "Acessórios",
 } as const;
 
+const coverImages = ["tubulacao-cobre", "dps"];
+
+function imageStyle(item: CatalogItem) {
+  if (coverImages.includes(item.id)) {
+    return "object-cover";
+  }
+
+  return "object-contain p-5";
+}
+
 export function CatalogCard({ item }: Props) {
   return (
     <article
@@ -26,11 +36,15 @@ export function CatalogCard({ item }: Props) {
         border
         border-[#09143a]/10
         bg-white
+
+        shadow-[0_2px_6px_rgba(9,20,58,0.04),0_10px_28px_rgba(9,20,58,0.07)]
+
         transition-all
         duration-300
-        hover:-translate-y-1
+
+        hover:-translate-y-1.5
         hover:border-[#082f9c]/20
-        hover:shadow-[0_16px_40px_rgba(9,20,58,.08)]
+        hover:shadow-[0_6px_14px_rgba(9,20,58,0.08),0_22px_50px_rgba(9,20,58,0.14)]
       "
     >
       {/* IMAGEM */}
@@ -38,10 +52,10 @@ export function CatalogCard({ item }: Props) {
         className="
           relative
           aspect-[4/3]
-          w-full
-          shrink-0
           overflow-hidden
-          bg-[#eef1f6]
+          border-b
+          border-[#09143a]/6
+          bg-[#f7f8fa]
         "
       >
         <Image
@@ -55,33 +69,56 @@ export function CatalogCard({ item }: Props) {
             (max-width: 1536px) 25vw,
             20vw
           "
-          className="
-            object-cover
+          className={`
+            ${imageStyle(item)}
             transition-transform
             duration-500
-            group-hover:scale-[1.025]
-          "
+            group-hover:scale-[1.035]
+          `}
         />
 
+        {/* DESTAQUE */}
         {item.featured && (
           <span
             className="
               absolute
-              left-4
-              top-4
+              left-3
+              top-3
               bg-[#061b5c]
               px-3
               py-1.5
-              text-[9px]
+              text-[8px]
               font-bold
               uppercase
-              tracking-[0.16em]
+              tracking-[0.18em]
               text-white
+              shadow-[0_8px_18px_rgba(6,27,92,0.16)]
             "
           >
             Destaque
           </span>
         )}
+
+        {/* STATUS */}
+        <span
+          className="
+            absolute
+            bottom-3
+            right-3
+            bg-white/95
+            px-2.5
+            py-1.5
+            text-[9px]
+            font-bold
+            uppercase
+            tracking-[0.12em]
+            text-[#082f9c]
+            shadow-[0_6px_16px_rgba(9,20,58,0.08)]
+            backdrop-blur-sm
+          "
+        >
+          Sob consulta
+        </span>
       </div>
 
       {/* CONTEÚDO */}
@@ -90,16 +127,17 @@ export function CatalogCard({ item }: Props) {
           flex
           flex-1
           flex-col
-          p-5
+          p-4
+          sm:p-5
         "
       >
         {/* CATEGORIA */}
         <p
           className="
-            text-[9px]
+            text-[8px]
             font-bold
             uppercase
-            tracking-[0.18em]
+            tracking-[0.2em]
             text-[#ff7900]
           "
         >
@@ -109,12 +147,12 @@ export function CatalogCard({ item }: Props) {
         {/* TÍTULO */}
         <h2
           className="
-            mt-3
+            mt-2
             line-clamp-2
-            min-h-[3.5rem]
-            text-[1.25rem]
+            min-h-[3.1rem]
+            text-[1.15rem]
             font-black
-            leading-[1.25]
+            leading-[1.2]
             tracking-[-0.03em]
             text-[#082f9c]
           "
@@ -125,12 +163,12 @@ export function CatalogCard({ item }: Props) {
         {/* DESCRIÇÃO */}
         <p
           className="
-            mt-3
-            line-clamp-3
-            min-h-[4.5rem]
-            text-sm
-            leading-6
-            text-[#09143a]/58
+            mt-2
+            line-clamp-2
+            min-h-[2.8rem]
+            text-[12.5px]
+            leading-[1.6]
+            text-[#09143a]/56
           "
         >
           {item.description}
@@ -138,60 +176,84 @@ export function CatalogCard({ item }: Props) {
 
         {/* MARCA */}
         {item.brand && (
-          <div
+          <p
             className="
-              mt-4
-              border-t
-              border-[#09143a]/8
-              pt-3
+              mt-3
+              text-[10px]
+              font-semibold
+              uppercase
+              tracking-[0.12em]
+              text-[#09143a]/36
             "
           >
-            <p
-              className="
-                text-[10px]
-                font-semibold
-                uppercase
-                tracking-[0.12em]
-                text-[#09143a]/36
-              "
-            >
-              {item.brand}
-            </p>
-          </div>
+            {item.brand}
+          </p>
         )}
 
-        {/* CTA */}
+        {/* PREÇO / CONSULTA */}
         <div
           className="
-            mt-auto
-            pt-5
+            mt-4
+            border-t
+            border-[#09143a]/8
+            pt-4
           "
         >
+          <p
+            className="
+              text-[9px]
+              font-bold
+              uppercase
+              tracking-[0.16em]
+              text-[#09143a]/35
+            "
+          >
+            Disponibilidade e valor
+          </p>
+
+          <p
+            className="
+              mt-1
+              text-sm
+              font-black
+              text-[#061b5c]
+            "
+          >
+            Consulte nossa equipe
+          </p>
+        </div>
+
+        {/* CTA */}
+        <div className="mt-auto pt-4">
           <WhatsappLink
             source={`catalog_${item.slug}`}
-            message={`Olá! Vim pelo catálogo da Soares Climatização e Soluções Elétricas e gostaria de informações sobre ${item.name}.`}
+            message={`Olá! Vim pelo catálogo da Soares Climatização e Soluções Elétricas e gostaria de consultar disponibilidade e valor do produto ${item.name}.`}
             className="
               inline-flex
               min-h-11
               w-full
               items-center
               justify-center
-              border
-              border-[#082f9c]/14
-              bg-white
+              bg-[#082f9c]
               px-4
               text-center
-              text-xs
+              text-[11px]
               font-bold
-              text-[#082f9c]
+              uppercase
+              tracking-[0.08em]
+              text-white
+
+              shadow-[0_8px_18px_rgba(8,47,156,0.14)]
+
               transition-all
               duration-200
-              hover:border-[#ff7900]
-              hover:bg-[#ff7900]
-              hover:text-white
+
+              hover:-translate-y-px
+              hover:bg-[#061b5c]
+              hover:shadow-[0_12px_24px_rgba(8,47,156,0.20)]
             "
           >
-            Consultar disponibilidade
+            Consultar produto
           </WhatsappLink>
         </div>
       </div>

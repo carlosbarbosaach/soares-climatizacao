@@ -126,13 +126,20 @@ export function Header() {
           transition-all
           duration-300
 
+          after:pointer-events-none
+          after:absolute
+          after:inset-x-0
+          after:bottom-0
+          after:h-px
+          after:bg-[linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent)]
+
           ${
             scrolled || !isHome
               ? `
-                bg-[#071b58]/95
-                shadow-[0_12px_40px_rgba(0,0,0,0.16)]
-                backdrop-blur-md
-              `
+                  bg-[linear-gradient(110deg,rgba(5,20,59,.97)_0%,rgba(7,31,98,.96)_42%,rgba(10,52,145,.95)_72%,rgba(13,76,184,.94)_100%)]
+                  shadow-[0_14px_45px_rgba(0,0,0,0.18)]
+                  backdrop-blur-xl
+                `
               : "bg-transparent"
           }
         `}
@@ -147,7 +154,7 @@ export function Header() {
             duration-300
 
             ${
-              scrolled
+              scrolled || !isHome
                 ? "h-[72px] border-transparent"
                 : "h-20 border-b border-white/20"
             }
@@ -234,7 +241,7 @@ export function Header() {
                     ${
                       active
                         ? "text-white"
-                        : "text-white/65 hover:text-white"
+                        : "text-white/68 hover:text-white"
                     }
                   `}
                 >
@@ -280,7 +287,8 @@ export function Header() {
                 items-center
                 justify-center
                 border
-                border-white/22
+                border-white/24
+                bg-white/[0.03]
                 px-4
                 text-[12px]
                 font-bold
@@ -288,7 +296,7 @@ export function Header() {
                 transition-all
                 duration-200
                 hover:border-white/45
-                hover:bg-white/[0.06]
+                hover:bg-white/[0.08]
                 xl:px-5
                 xl:text-[13px]
               "
@@ -306,7 +314,12 @@ export function Header() {
                 text-[12px]
                 font-bold
                 text-white
+                shadow-[0_10px_28px_rgba(255,121,0,.20)]
+                transition-all
+                duration-200
+                hover:-translate-y-px
                 hover:bg-[#ff8d27]
+                hover:shadow-[0_14px_34px_rgba(255,121,0,.26)]
                 xl:px-5
                 xl:text-[13px]
               "
@@ -422,8 +435,8 @@ export function Header() {
           fixed
           inset-0
           z-[60]
-          bg-[#020817]/70
-          backdrop-blur-[2px]
+          bg-[#020817]/72
+          backdrop-blur-[3px]
           transition-all
           duration-300
           lg:hidden
@@ -450,13 +463,15 @@ export function Header() {
           w-[88%]
           max-w-[390px]
           flex-col
-          bg-[#071b58]
+          overflow-hidden
           text-white
-          shadow-[-24px_0_60px_rgba(0,0,0,.28)]
+          shadow-[-24px_0_60px_rgba(0,0,0,.30)]
           transition-transform
           duration-300
           ease-out
           lg:hidden
+
+          bg-[linear-gradient(150deg,#05143b_0%,#071f62_46%,#0a3491_76%,#0d4cb8_100%)]
 
           ${
             open
@@ -465,9 +480,24 @@ export function Header() {
           }
         `}
       >
+        {/* LUZ DISCRETA */}
+        <div
+          aria-hidden="true"
+          className="
+            pointer-events-none
+            absolute
+            inset-x-0
+            top-0
+            h-44
+            bg-[radial-gradient(circle_at_75%_0%,rgba(255,255,255,.10),transparent_52%)]
+          "
+        />
+
         {/* TOPO DRAWER */}
         <div
           className="
+            relative
+            z-10
             flex
             h-20
             items-center
@@ -558,6 +588,8 @@ export function Header() {
         {/* LINKS */}
         <nav
           className="
+            relative
+            z-10
             flex-1
             overflow-y-auto
             px-5
@@ -633,7 +665,8 @@ export function Header() {
               items-center
               justify-center
               border
-              border-white/18
+              border-white/20
+              bg-white/[0.04]
               px-5
               text-sm
               font-bold
@@ -641,7 +674,7 @@ export function Header() {
               transition-all
               duration-200
               hover:border-white/35
-              hover:bg-white/[0.05]
+              hover:bg-white/[0.08]
             "
           >
             Ver catálogo
@@ -656,6 +689,7 @@ export function Header() {
               w-full
               bg-[#ff7900]
               text-white
+              shadow-[0_12px_28px_rgba(255,121,0,.20)]
               hover:bg-[#ff8d27]
             "
           >
@@ -666,8 +700,11 @@ export function Header() {
         {/* BASE */}
         <div
           className="
+            relative
+            z-10
             border-t
             border-white/10
+            bg-black/[0.04]
             px-5
             py-5
           "
@@ -677,11 +714,10 @@ export function Header() {
               max-w-[290px]
               text-xs
               leading-5
-              text-white/38
+              text-white/40
             "
           >
-            Climatização, soluções elétricas e equipamentos para residências e
-            empresas.
+            Climatização, soluções elétricas e equipamentos para residências e empresas.
           </p>
         </div>
       </aside>

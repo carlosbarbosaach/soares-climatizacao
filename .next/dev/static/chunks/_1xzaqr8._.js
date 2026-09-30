@@ -18,107 +18,148 @@ const categoryLabels = {
     infraestrutura: "Infraestrutura",
     acessorios: "Acessórios"
 };
+const coverImages = [
+    "tubulacao-cobre",
+    "dps"
+];
+function imageStyle(item) {
+    if (coverImages.includes(item.id)) {
+        return "object-cover";
+    }
+    return "object-contain p-5";
+}
 function CatalogCard({ item }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
-        className: "\r\n\n        group\r\n\n        flex\r\n\n        h-full\r\n\n        flex-col\r\n\n        overflow-hidden\r\n\n        border\r\n\n        border-[#09143a]/10\r\n\n        bg-white\r\n\n        transition-all\r\n\n        duration-300\r\n\n        hover:-translate-y-1\r\n\n        hover:border-[#082f9c]/20\r\n\n        hover:shadow-[0_16px_40px_rgba(9,20,58,.08)]\r\n\n      ",
+        className: "\r\n\n        group\r\n\n        flex\r\n\n        h-full\r\n\n        flex-col\r\n\n        overflow-hidden\r\n\n        border\r\n\n        border-[#09143a]/10\r\n\n        bg-white\r\n\n\r\n\n        shadow-[0_2px_6px_rgba(9,20,58,0.04),0_10px_28px_rgba(9,20,58,0.07)]\r\n\n\r\n\n        transition-all\r\n\n        duration-300\r\n\n\r\n\n        hover:-translate-y-1.5\r\n\n        hover:border-[#082f9c]/20\r\n\n        hover:shadow-[0_6px_14px_rgba(9,20,58,0.08),0_22px_50px_rgba(9,20,58,0.14)]\r\n\n      ",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "\r\n\n          relative\r\n\n          aspect-[4/3]\r\n\n          w-full\r\n\n          shrink-0\r\n\n          overflow-hidden\r\n\n          bg-[#eef1f6]\r\n\n        ",
+                className: "\r\n\n          relative\r\n\n          aspect-[4/3]\r\n\n          overflow-hidden\r\n\n          border-b\r\n\n          border-[#09143a]/6\r\n\n          bg-[#f7f8fa]\r\n\n        ",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         src: item.image,
                         alt: item.name,
                         fill: true,
                         sizes: "\r\n\n            (max-width: 640px) 100vw,\r\n\n            (max-width: 768px) 50vw,\r\n\n            (max-width: 1280px) 33vw,\r\n\n            (max-width: 1536px) 25vw,\r\n\n            20vw\r\n\n          ",
-                        className: "\r\n\n            object-cover\r\n\n            transition-transform\r\n\n            duration-500\r\n\n            group-hover:scale-[1.025]\r\n\n          "
+                        className: `
+            ${imageStyle(item)}
+            transition-transform
+            duration-500
+            group-hover:scale-[1.035]
+          `
                     }, void 0, false, {
                         fileName: "[project]/components/catalog/CatalogCard.tsx",
-                        lineNumber: 47,
+                        lineNumber: 61,
                         columnNumber: 9
                     }, this),
                     item.featured && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "\r\n\n              absolute\r\n\n              left-4\r\n\n              top-4\r\n\n              bg-[#061b5c]\r\n\n              px-3\r\n\n              py-1.5\r\n\n              text-[9px]\r\n\n              font-bold\r\n\n              uppercase\r\n\n              tracking-[0.16em]\r\n\n              text-white\r\n\n            ",
+                        className: "\r\n\n              absolute\r\n\n              left-3\r\n\n              top-3\r\n\n              bg-[#061b5c]\r\n\n              px-3\r\n\n              py-1.5\r\n\n              text-[8px]\r\n\n              font-bold\r\n\n              uppercase\r\n\n              tracking-[0.18em]\r\n\n              text-white\r\n\n              shadow-[0_8px_18px_rgba(6,27,92,0.16)]\r\n\n            ",
                         children: "Destaque"
                     }, void 0, false, {
                         fileName: "[project]/components/catalog/CatalogCard.tsx",
-                        lineNumber: 67,
+                        lineNumber: 82,
                         columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "\r\n\n            absolute\r\n\n            bottom-3\r\n\n            right-3\r\n\n            bg-white/95\r\n\n            px-2.5\r\n\n            py-1.5\r\n\n            text-[9px]\r\n\n            font-bold\r\n\n            uppercase\r\n\n            tracking-[0.12em]\r\n\n            text-[#082f9c]\r\n\n            shadow-[0_6px_16px_rgba(9,20,58,0.08)]\r\n\n            backdrop-blur-sm\r\n\n          ",
+                        children: "Sob consulta"
+                    }, void 0, false, {
+                        fileName: "[project]/components/catalog/CatalogCard.tsx",
+                        lineNumber: 103,
+                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/catalog/CatalogCard.tsx",
-                lineNumber: 37,
+                lineNumber: 51,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "\r\n\n          flex\r\n\n          flex-1\r\n\n          flex-col\r\n\n          p-5\r\n\n        ",
+                className: "\r\n\n          flex\r\n\n          flex-1\r\n\n          flex-col\r\n\n          p-4\r\n\n          sm:p-5\r\n\n        ",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "\r\n\n            text-[9px]\r\n\n            font-bold\r\n\n            uppercase\r\n\n            tracking-[0.18em]\r\n\n            text-[#ff7900]\r\n\n          ",
+                        className: "\r\n\n            text-[8px]\r\n\n            font-bold\r\n\n            uppercase\r\n\n            tracking-[0.2em]\r\n\n            text-[#ff7900]\r\n\n          ",
                         children: categoryLabels[item.category]
                     }, void 0, false, {
                         fileName: "[project]/components/catalog/CatalogCard.tsx",
-                        lineNumber: 97,
+                        lineNumber: 135,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "\r\n\n            mt-3\r\n\n            line-clamp-2\r\n\n            min-h-[3.5rem]\r\n\n            text-[1.25rem]\r\n\n            font-black\r\n\n            leading-[1.25]\r\n\n            tracking-[-0.03em]\r\n\n            text-[#082f9c]\r\n\n          ",
+                        className: "\r\n\n            mt-2\r\n\n            line-clamp-2\r\n\n            min-h-[3.1rem]\r\n\n            text-[1.15rem]\r\n\n            font-black\r\n\n            leading-[1.2]\r\n\n            tracking-[-0.03em]\r\n\n            text-[#082f9c]\r\n\n          ",
                         children: item.name
                     }, void 0, false, {
                         fileName: "[project]/components/catalog/CatalogCard.tsx",
-                        lineNumber: 110,
+                        lineNumber: 148,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "\r\n\n            mt-3\r\n\n            line-clamp-3\r\n\n            min-h-[4.5rem]\r\n\n            text-sm\r\n\n            leading-6\r\n\n            text-[#09143a]/58\r\n\n          ",
+                        className: "\r\n\n            mt-2\r\n\n            line-clamp-2\r\n\n            min-h-[2.8rem]\r\n\n            text-[12.5px]\r\n\n            leading-[1.6]\r\n\n            text-[#09143a]/56\r\n\n          ",
                         children: item.description
-                    }, void 0, false, {
-                        fileName: "[project]/components/catalog/CatalogCard.tsx",
-                        lineNumber: 126,
-                        columnNumber: 9
-                    }, this),
-                    item.brand && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "\r\n\n              mt-4\r\n\n              border-t\r\n\n              border-[#09143a]/8\r\n\n              pt-3\r\n\n            ",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "\r\n\n                text-[10px]\r\n\n                font-semibold\r\n\n                uppercase\r\n\n                tracking-[0.12em]\r\n\n                text-[#09143a]/36\r\n\n              ",
-                            children: item.brand
-                        }, void 0, false, {
-                            fileName: "[project]/components/catalog/CatalogCard.tsx",
-                            lineNumber: 149,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/components/catalog/CatalogCard.tsx",
-                        lineNumber: 141,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "\r\n\n            mt-auto\r\n\n            pt-5\r\n\n          ",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$WhatsappLink$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["WhatsappLink"], {
-                            source: `catalog_${item.slug}`,
-                            message: `Olá! Vim pelo catálogo da Soares Climatização e Soluções Elétricas e gostaria de informações sobre ${item.name}.`,
-                            className: "\r\n\n              inline-flex\r\n\n              min-h-11\r\n\n              w-full\r\n\n              items-center\r\n\n              justify-center\r\n\n              border\r\n\n              border-[#082f9c]/14\r\n\n              bg-white\r\n\n              px-4\r\n\n              text-center\r\n\n              text-xs\r\n\n              font-bold\r\n\n              text-[#082f9c]\r\n\n              transition-all\r\n\n              duration-200\r\n\n              hover:border-[#ff7900]\r\n\n              hover:bg-[#ff7900]\r\n\n              hover:text-white\r\n\n            ",
-                            children: "Consultar disponibilidade"
-                        }, void 0, false, {
-                            fileName: "[project]/components/catalog/CatalogCard.tsx",
-                            lineNumber: 170,
-                            columnNumber: 11
-                        }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/catalog/CatalogCard.tsx",
                         lineNumber: 164,
                         columnNumber: 9
+                    }, this),
+                    item.brand && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "\r\n\n              mt-3\r\n\n              text-[10px]\r\n\n              font-semibold\r\n\n              uppercase\r\n\n              tracking-[0.12em]\r\n\n              text-[#09143a]/36\r\n\n            ",
+                        children: item.brand
+                    }, void 0, false, {
+                        fileName: "[project]/components/catalog/CatalogCard.tsx",
+                        lineNumber: 179,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "\r\n\n            mt-4\r\n\n            border-t\r\n\n            border-[#09143a]/8\r\n\n            pt-4\r\n\n          ",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "\r\n\n              text-[9px]\r\n\n              font-bold\r\n\n              uppercase\r\n\n              tracking-[0.16em]\r\n\n              text-[#09143a]/35\r\n\n            ",
+                                children: "Disponibilidade e valor"
+                            }, void 0, false, {
+                                fileName: "[project]/components/catalog/CatalogCard.tsx",
+                                lineNumber: 202,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "\r\n\n              mt-1\r\n\n              text-sm\r\n\n              font-black\r\n\n              text-[#061b5c]\r\n\n            ",
+                                children: "Consulte nossa equipe"
+                            }, void 0, false, {
+                                fileName: "[project]/components/catalog/CatalogCard.tsx",
+                                lineNumber: 214,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/catalog/CatalogCard.tsx",
+                        lineNumber: 194,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-auto pt-4",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$WhatsappLink$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["WhatsappLink"], {
+                            source: `catalog_${item.slug}`,
+                            message: `Olá! Vim pelo catálogo da Soares Climatização e Soluções Elétricas e gostaria de consultar disponibilidade e valor do produto ${item.name}.`,
+                            className: "\r\n\n              inline-flex\r\n\n              min-h-11\r\n\n              w-full\r\n\n              items-center\r\n\n              justify-center\r\n\n              bg-[#082f9c]\r\n\n              px-4\r\n\n              text-center\r\n\n              text-[11px]\r\n\n              font-bold\r\n\n              uppercase\r\n\n              tracking-[0.08em]\r\n\n              text-white\r\n\n\r\n\n              shadow-[0_8px_18px_rgba(8,47,156,0.14)]\r\n\n\r\n\n              transition-all\r\n\n              duration-200\r\n\n\r\n\n              hover:-translate-y-px\r\n\n              hover:bg-[#061b5c]\r\n\n              hover:shadow-[0_12px_24px_rgba(8,47,156,0.20)]\r\n\n            ",
+                            children: "Consultar produto"
+                        }, void 0, false, {
+                            fileName: "[project]/components/catalog/CatalogCard.tsx",
+                            lineNumber: 228,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/components/catalog/CatalogCard.tsx",
+                        lineNumber: 227,
+                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/catalog/CatalogCard.tsx",
-                lineNumber: 88,
+                lineNumber: 125,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/catalog/CatalogCard.tsx",
-        lineNumber: 19,
+        lineNumber: 29,
         columnNumber: 5
     }, this);
 }
@@ -838,11 +879,18 @@ function Header() {
           transition-all
           duration-300
 
+          after:pointer-events-none
+          after:absolute
+          after:inset-x-0
+          after:bottom-0
+          after:h-px
+          after:bg-[linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent)]
+
           ${scrolled || !isHome ? `
-                bg-[#071b58]/95
-                shadow-[0_12px_40px_rgba(0,0,0,0.16)]
-                backdrop-blur-md
-              ` : "bg-transparent"}
+                  bg-[linear-gradient(110deg,rgba(5,20,59,.97)_0%,rgba(7,31,98,.96)_42%,rgba(10,52,145,.95)_72%,rgba(13,76,184,.94)_100%)]
+                  shadow-[0_14px_45px_rgba(0,0,0,0.18)]
+                  backdrop-blur-xl
+                ` : "bg-transparent"}
         `,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: `
@@ -853,7 +901,7 @@ function Header() {
             transition-all
             duration-300
 
-            ${scrolled ? "h-[72px] border-transparent" : "h-20 border-b border-white/20"}
+            ${scrolled || !isHome ? "h-[72px] border-transparent" : "h-20 border-b border-white/20"}
           `,
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -867,7 +915,7 @@ function Header() {
                                     children: "SOARES"
                                 }, void 0, false, {
                                     fileName: "[project]/components/layout/Header.tsx",
-                                    lineNumber: 171,
+                                    lineNumber: 178,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -875,13 +923,13 @@ function Header() {
                                     children: "Climatização & Soluções Elétricas"
                                 }, void 0, false, {
                                     fileName: "[project]/components/layout/Header.tsx",
-                                    lineNumber: 182,
+                                    lineNumber: 189,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/layout/Header.tsx",
-                            lineNumber: 157,
+                            lineNumber: 164,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -904,7 +952,7 @@ function Header() {
                     duration-200
                     xl:text-[13px]
 
-                    ${active ? "text-white" : "text-white/65 hover:text-white"}
+                    ${active ? "text-white" : "text-white/68 hover:text-white"}
                   `,
                                     children: [
                                         label,
@@ -922,19 +970,19 @@ function Header() {
                     `
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/Header.tsx",
-                                            lineNumber: 243,
+                                            lineNumber: 250,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, href, true, {
                                     fileName: "[project]/components/layout/Header.tsx",
-                                    lineNumber: 217,
+                                    lineNumber: 224,
                                     columnNumber: 17
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/components/layout/Header.tsx",
-                            lineNumber: 198,
+                            lineNumber: 205,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -942,27 +990,27 @@ function Header() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/catalogo",
-                                    className: "\n                focus-ring\n                inline-flex\n                min-h-11\n                items-center\n                justify-center\n                border\n                border-white/22\n                px-4\n                text-[12px]\n                font-bold\n                text-white\n                transition-all\n                duration-200\n                hover:border-white/45\n                hover:bg-white/[0.06]\n                xl:px-5\n                xl:text-[13px]\n              ",
+                                    className: "\n                focus-ring\n                inline-flex\n                min-h-11\n                items-center\n                justify-center\n                border\n                border-white/24\n                bg-white/[0.03]\n                px-4\n                text-[12px]\n                font-bold\n                text-white\n                transition-all\n                duration-200\n                hover:border-white/45\n                hover:bg-white/[0.08]\n                xl:px-5\n                xl:text-[13px]\n              ",
                                     children: "Ver catálogo"
                                 }, void 0, false, {
                                     fileName: "[project]/components/layout/Header.tsx",
-                                    lineNumber: 274,
+                                    lineNumber: 281,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$WhatsappLink$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["WhatsappLink"], {
                                     source: "header",
                                     message: "Olá! Vim pelo site da Soares Climatização e Soluções Elétricas e gostaria de solicitar um orçamento.",
-                                    className: "\n                min-h-11\n                bg-[#ff7900]\n                px-4\n                text-[12px]\n                font-bold\n                text-white\n                hover:bg-[#ff8d27]\n                xl:px-5\n                xl:text-[13px]\n              ",
+                                    className: "\n                min-h-11\n                bg-[#ff7900]\n                px-4\n                text-[12px]\n                font-bold\n                text-white\n                shadow-[0_10px_28px_rgba(255,121,0,.20)]\n                transition-all\n                duration-200\n                hover:-translate-y-px\n                hover:bg-[#ff8d27]\n                hover:shadow-[0_14px_34px_rgba(255,121,0,.26)]\n                xl:px-5\n                xl:text-[13px]\n              ",
                                     children: "Pedir orçamento"
                                 }, void 0, false, {
                                     fileName: "[project]/components/layout/Header.tsx",
-                                    lineNumber: 299,
+                                    lineNumber: 307,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/layout/Header.tsx",
-                            lineNumber: 266,
+                            lineNumber: 273,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -978,7 +1026,7 @@ function Header() {
                                     children: open ? "Fechar menu" : "Abrir menu"
                                 }, void 0, false, {
                                     fileName: "[project]/components/layout/Header.tsx",
-                                    lineNumber: 342,
+                                    lineNumber: 355,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -999,7 +1047,7 @@ function Header() {
                 `
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/Header.tsx",
-                                            lineNumber: 356,
+                                            lineNumber: 369,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1016,7 +1064,7 @@ function Header() {
                 `
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/Header.tsx",
-                                            lineNumber: 375,
+                                            lineNumber: 388,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1034,25 +1082,25 @@ function Header() {
                 `
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/Header.tsx",
-                                            lineNumber: 393,
+                                            lineNumber: 406,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/layout/Header.tsx",
-                                    lineNumber: 348,
+                                    lineNumber: 361,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/layout/Header.tsx",
-                            lineNumber: 319,
+                            lineNumber: 332,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/layout/Header.tsx",
-                    lineNumber: 140,
+                    lineNumber: 147,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
@@ -1068,8 +1116,8 @@ function Header() {
           fixed
           inset-0
           z-[60]
-          bg-[#020817]/70
-          backdrop-blur-[2px]
+          bg-[#020817]/72
+          backdrop-blur-[3px]
           transition-all
           duration-300
           lg:hidden
@@ -1078,7 +1126,7 @@ function Header() {
         `
             }, void 0, false, {
                 fileName: "[project]/components/layout/Header.tsx",
-                lineNumber: 417,
+                lineNumber: 430,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -1094,19 +1142,29 @@ function Header() {
           w-[88%]
           max-w-[390px]
           flex-col
-          bg-[#071b58]
+          overflow-hidden
           text-white
-          shadow-[-24px_0_60px_rgba(0,0,0,.28)]
+          shadow-[-24px_0_60px_rgba(0,0,0,.30)]
           transition-transform
           duration-300
           ease-out
           lg:hidden
 
+          bg-[linear-gradient(150deg,#05143b_0%,#071f62_46%,#0a3491_76%,#0d4cb8_100%)]
+
           ${open ? "translate-x-0" : "translate-x-full"}
         `,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "\n            flex\n            h-20\n            items-center\n            justify-between\n            border-b\n            border-white/10\n            px-5\n          ",
+                        "aria-hidden": "true",
+                        className: "\n            pointer-events-none\n            absolute\n            inset-x-0\n            top-0\n            h-44\n            bg-[radial-gradient(circle_at_75%_0%,rgba(255,255,255,.10),transparent_52%)]\n          "
+                    }, void 0, false, {
+                        fileName: "[project]/components/layout/Header.tsx",
+                        lineNumber: 484,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "\n            relative\n            z-10\n            flex\n            h-20\n            items-center\n            justify-between\n            border-b\n            border-white/10\n            px-5\n          ",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: "/#inicio",
@@ -1118,7 +1176,7 @@ function Header() {
                                         children: "SOARES"
                                     }, void 0, false, {
                                         fileName: "[project]/components/layout/Header.tsx",
-                                        lineNumber: 491,
+                                        lineNumber: 521,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1126,13 +1184,13 @@ function Header() {
                                         children: "Climatização & Soluções Elétricas"
                                     }, void 0, false, {
                                         fileName: "[project]/components/layout/Header.tsx",
-                                        lineNumber: 501,
+                                        lineNumber: 531,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/layout/Header.tsx",
-                                lineNumber: 480,
+                                lineNumber: 510,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1145,30 +1203,30 @@ function Header() {
                                         className: "\n                absolute\n                left-1/2\n                top-1/2\n                h-[2px]\n                w-5\n                -translate-x-1/2\n                -translate-y-1/2\n                rotate-45\n                bg-white\n              "
                                     }, void 0, false, {
                                         fileName: "[project]/components/layout/Header.tsx",
-                                        lineNumber: 528,
+                                        lineNumber: 558,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "\n                absolute\n                left-1/2\n                top-1/2\n                h-[2px]\n                w-5\n                -translate-x-1/2\n                -translate-y-1/2\n                -rotate-45\n                bg-white\n              "
                                     }, void 0, false, {
                                         fileName: "[project]/components/layout/Header.tsx",
-                                        lineNumber: 542,
+                                        lineNumber: 572,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/layout/Header.tsx",
-                                lineNumber: 515,
+                                lineNumber: 545,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/layout/Header.tsx",
-                        lineNumber: 469,
+                        lineNumber: 497,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
-                        className: "\n            flex-1\n            overflow-y-auto\n            px-5\n            py-5\n          ",
+                        className: "\n            relative\n            z-10\n            flex-1\n            overflow-y-auto\n            px-5\n            py-5\n          ",
                         "aria-label": "Menu mobile",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1199,66 +1257,66 @@ function Header() {
                                                 className: "\n                        absolute\n                        bottom-[-1px]\n                        left-0\n                        h-[2px]\n                        w-12\n                        bg-[#ff7900]\n                      "
                                             }, void 0, false, {
                                                 fileName: "[project]/components/layout/Header.tsx",
-                                                lineNumber: 606,
+                                                lineNumber: 638,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, href, true, {
                                         fileName: "[project]/components/layout/Header.tsx",
-                                        lineNumber: 578,
+                                        lineNumber: 610,
                                         columnNumber: 17
                                     }, this);
                                 })
                             }, void 0, false, {
                                 fileName: "[project]/components/layout/Header.tsx",
-                                lineNumber: 568,
+                                lineNumber: 600,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: "/catalogo",
                                 onClick: ()=>setOpen(false),
-                                className: "\n              mt-7\n              flex\n              min-h-12\n              w-full\n              items-center\n              justify-center\n              border\n              border-white/18\n              px-5\n              text-sm\n              font-bold\n              text-white\n              transition-all\n              duration-200\n              hover:border-white/35\n              hover:bg-white/[0.05]\n            ",
+                                className: "\n              mt-7\n              flex\n              min-h-12\n              w-full\n              items-center\n              justify-center\n              border\n              border-white/20\n              bg-white/[0.04]\n              px-5\n              text-sm\n              font-bold\n              text-white\n              transition-all\n              duration-200\n              hover:border-white/35\n              hover:bg-white/[0.08]\n            ",
                                 children: "Ver catálogo"
                             }, void 0, false, {
                                 fileName: "[project]/components/layout/Header.tsx",
-                                lineNumber: 623,
+                                lineNumber: 655,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$WhatsappLink$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["WhatsappLink"], {
                                 source: "mobile_menu",
                                 message: "Olá! Vim pelo site da Soares Climatização e Soluções Elétricas e gostaria de solicitar um orçamento.",
-                                className: "\n              mt-3\n              w-full\n              bg-[#ff7900]\n              text-white\n              hover:bg-[#ff8d27]\n            ",
+                                className: "\n              mt-3\n              w-full\n              bg-[#ff7900]\n              text-white\n              shadow-[0_12px_28px_rgba(255,121,0,.20)]\n              hover:bg-[#ff8d27]\n            ",
                                 children: "Pedir orçamento"
                             }, void 0, false, {
                                 fileName: "[project]/components/layout/Header.tsx",
-                                lineNumber: 651,
+                                lineNumber: 684,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/layout/Header.tsx",
-                        lineNumber: 559,
+                        lineNumber: 589,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "\n            border-t\n            border-white/10\n            px-5\n            py-5\n          ",
+                        className: "\n            relative\n            z-10\n            border-t\n            border-white/10\n            bg-black/[0.04]\n            px-5\n            py-5\n          ",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "\n              max-w-[290px]\n              text-xs\n              leading-5\n              text-white/38\n            ",
+                            className: "\n              max-w-[290px]\n              text-xs\n              leading-5\n              text-white/40\n            ",
                             children: "Climatização, soluções elétricas e equipamentos para residências e empresas."
                         }, void 0, false, {
                             fileName: "[project]/components/layout/Header.tsx",
-                            lineNumber: 675,
+                            lineNumber: 712,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/layout/Header.tsx",
-                        lineNumber: 667,
+                        lineNumber: 701,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/layout/Header.tsx",
-                lineNumber: 440,
+                lineNumber: 453,
                 columnNumber: 7
             }, this)
         ]
@@ -1333,33 +1391,8 @@ const catalogItems = [
         name: "Ar-condicionado Split",
         category: "climatizacao",
         description: "Equipamentos para climatização residencial e comercial, com diferentes capacidades e aplicações.",
-        image: "/images/catalogo/ar-condicionado-split.png",
+        image: "/images/catalogo/imagem02.png",
         featured: true
-    },
-    {
-        id: "ar-condicionado-inverter",
-        slug: "ar-condicionado-inverter",
-        name: "Ar-condicionado Inverter",
-        category: "climatizacao",
-        description: "Equipamentos com tecnologia inverter para climatização de ambientes residenciais e comerciais.",
-        image: "/images/catalogo/ar-condicionado-inverter.png",
-        featured: true
-    },
-    {
-        id: "evaporadora-split",
-        slug: "evaporadora-split",
-        name: "Evaporadora Split",
-        category: "climatizacao",
-        description: "Unidade interna utilizada em sistemas de ar-condicionado split.",
-        image: "/images/catalogo/evaporadora-split.png"
-    },
-    {
-        id: "condensadora-split",
-        slug: "condensadora-split",
-        name: "Condensadora Split",
-        category: "climatizacao",
-        description: "Unidade externa para sistemas de climatização split residencial e comercial.",
-        image: "/images/catalogo/condensadora-split.png"
     },
     // INFRAESTRUTURA
     {
@@ -1368,7 +1401,7 @@ const catalogItems = [
         name: "Tubulação de cobre",
         category: "infraestrutura",
         description: "Tubulação utilizada na infraestrutura e instalação de sistemas de climatização.",
-        image: "/images/catalogo/tubulacao-cobre.png"
+        image: "/images/catalogo/imagem01.png"
     },
     {
         id: "isolamento-termico",
@@ -1376,15 +1409,7 @@ const catalogItems = [
         name: "Isolamento térmico",
         category: "infraestrutura",
         description: "Material utilizado no acabamento e proteção térmica da tubulação de climatização.",
-        image: "/images/catalogo/isolamento-termico.png"
-    },
-    {
-        id: "suporte-condensadora",
-        slug: "suporte-condensadora",
-        name: "Suporte para condensadora",
-        category: "infraestrutura",
-        description: "Suporte para fixação de unidades externas de sistemas de ar-condicionado.",
-        image: "/images/catalogo/suporte-condensadora.png"
+        image: "/images/catalogo/imagem05.png"
     },
     {
         id: "canaleta-acabamento",
@@ -1392,32 +1417,16 @@ const catalogItems = [
         name: "Canaleta de acabamento",
         category: "infraestrutura",
         description: "Canaleta para organização e acabamento de tubulações e instalações aparentes.",
-        image: "/images/catalogo/canaleta-acabamento.png"
+        image: "/images/catalogo/imagem06.png"
     },
     // ELÉTRICA
-    {
-        id: "disjuntores",
-        slug: "disjuntores",
-        name: "Disjuntores",
-        category: "eletrica",
-        description: "Componentes para proteção e organização de circuitos elétricos.",
-        image: "/images/catalogo/disjuntores.png"
-    },
     {
         id: "cabos-eletricos",
         slug: "cabos-eletricos",
         name: "Cabos elétricos",
         category: "eletrica",
         description: "Cabos e condutores para instalações e adequações elétricas.",
-        image: "/images/catalogo/cabos-eletricos.png"
-    },
-    {
-        id: "quadro-distribuicao",
-        slug: "quadro-distribuicao",
-        name: "Quadro de distribuição",
-        category: "eletrica",
-        description: "Quadros para organização e distribuição de circuitos elétricos.",
-        image: "/images/catalogo/quadro-distribuicao.png"
+        image: "/images/catalogo/imagem03.png"
     },
     {
         id: "dps",
@@ -1425,40 +1434,16 @@ const catalogItems = [
         name: "DPS",
         category: "eletrica",
         description: "Dispositivo utilizado na proteção de instalações elétricas contra surtos.",
-        image: "/images/catalogo/dps.png"
-    },
-    {
-        id: "tomada-20a",
-        slug: "tomada-20a",
-        name: "Tomada 20A",
-        category: "eletrica",
-        description: "Tomada para aplicações elétricas compatíveis com equipamentos de maior corrente.",
-        image: "/images/catalogo/tomada-20a.png"
+        image: "/images/catalogo/imagem04.png"
     },
     // ACESSÓRIOS
-    {
-        id: "mangueira-dreno",
-        slug: "mangueira-dreno",
-        name: "Mangueira para dreno",
-        category: "acessorios",
-        description: "Mangueira utilizada no escoamento da água gerada pelo sistema de climatização.",
-        image: "/images/catalogo/mangueira-dreno.png"
-    },
-    {
-        id: "bomba-dreno",
-        slug: "bomba-dreno",
-        name: "Bomba de dreno",
-        category: "acessorios",
-        description: "Solução auxiliar para drenagem em instalações de ar-condicionado.",
-        image: "/images/catalogo/bomba-dreno.png"
-    },
     {
         id: "fita-pvc",
         slug: "fita-pvc",
         name: "Fita PVC para acabamento",
         category: "acessorios",
         description: "Material para proteção e acabamento de tubulações em instalações de climatização.",
-        image: "/images/catalogo/fita-pvc.png"
+        image: "/images/catalogo/imagem07.png"
     }
 ];
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
