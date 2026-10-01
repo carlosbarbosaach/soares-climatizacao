@@ -12,7 +12,7 @@ export function Hero() {
       id="inicio"
       className="
         relative
-        min-h-[680px]
+        min-h-[720px]
         overflow-hidden
         bg-[#061b5c]
         text-white
@@ -20,9 +20,47 @@ export function Hero() {
         lg:min-h-[780px]
       "
     >
-      {/* IMAGEM */}
+      {/* IMAGEM MOBILE */}
       <motion.div
-        className="absolute inset-0"
+        className="
+          absolute
+          inset-0
+          md:hidden
+        "
+        initial={{
+          opacity: 0,
+          scale: 1.025,
+        }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1.1,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+      >
+        <Image
+          src="/images/hero-banner-mobile.png"
+          alt="Profissional realizando serviço técnico de climatização"
+          fill
+          priority
+          sizes="100vw"
+          className="
+            object-cover
+            object-center
+          "
+        />
+      </motion.div>
+
+      {/* IMAGEM TABLET / DESKTOP */}
+      <motion.div
+        className="
+          absolute
+          inset-0
+          hidden
+          md:block
+        "
         initial={{
           opacity: 0,
           scale: 1.025,
@@ -44,30 +82,55 @@ export function Hero() {
           sizes="100vw"
           className="
             object-cover
-            object-[66%_center]
-            sm:object-[64%_center]
+            object-[64%_center]
             lg:object-center
           "
         />
       </motion.div>
 
-      {/* OVERLAY */}
+      {/* OVERLAY MOBILE */}
       <div
         className="
           absolute
           inset-0
-          bg-[linear-gradient(90deg,rgba(5,24,81,.98)_0%,rgba(5,24,81,.95)_28%,rgba(5,24,81,.82)_45%,rgba(5,24,81,.40)_62%,rgba(5,24,81,.08)_100%)]
+          bg-[linear-gradient(180deg,rgba(5,24,81,.78)_0%,rgba(5,24,81,.72)_24%,rgba(5,24,81,.82)_55%,rgba(5,24,81,.96)_100%)]
+          md:hidden
         "
       />
 
-      {/* PROFUNDIDADE */}
+      {/* OVERLAY DESKTOP */}
+      <div
+        className="
+          absolute
+          inset-0
+          hidden
+          md:block
+          md:bg-[linear-gradient(90deg,rgba(5,24,81,.98)_0%,rgba(5,24,81,.95)_28%,rgba(5,24,81,.82)_45%,rgba(5,24,81,.40)_62%,rgba(5,24,81,.08)_100%)]
+        "
+      />
+
+      {/* ESCURECIMENTO EXTRA MOBILE NO LADO ESQUERDO */}
+      <div
+        className="
+          absolute
+          inset-y-0
+          left-0
+          w-[78%]
+          bg-[linear-gradient(90deg,rgba(5,24,81,.68)_0%,rgba(5,24,81,.35)_62%,transparent_100%)]
+          md:hidden
+        "
+      />
+
+      {/* PROFUNDIDADE INFERIOR */}
       <div
         className="
           absolute
           inset-x-0
           bottom-0
-          h-44
-          bg-[linear-gradient(180deg,transparent,rgba(5,24,81,.72))]
+          h-48
+          bg-[linear-gradient(180deg,transparent,rgba(5,24,81,.82))]
+          md:h-44
+          md:bg-[linear-gradient(180deg,transparent,rgba(5,24,81,.72))]
         "
       />
 
@@ -77,9 +140,9 @@ export function Hero() {
           shell
           relative
           flex
-          min-h-[680px]
+          min-h-[720px]
           items-center
-          pt-24
+          pt-28
           md:min-h-[740px]
           md:pt-20
           lg:min-h-[780px]
@@ -88,8 +151,9 @@ export function Hero() {
       >
         <div
           className="
+            w-full
             max-w-[640px]
-            -translate-y-4
+            -translate-y-1
             md:-translate-y-6
             lg:-translate-y-8
           "
@@ -109,20 +173,25 @@ export function Hero() {
               ease: [0.22, 1, 0.36, 1],
             }}
           >
+            {/* KICKER */}
             <p
               className="
                 mb-4
+                max-w-[320px]
                 text-[10px]
                 font-bold
                 uppercase
+                leading-[1.6]
                 tracking-[0.2em]
                 text-[#ff8a1c]
+                sm:max-w-none
                 sm:text-[11px]
               "
             >
               Climatização & soluções elétricas em {site.region}
             </p>
 
+            {/* TÍTULO */}
             <h1
               className="
                 max-w-[570px]
@@ -138,13 +207,14 @@ export function Hero() {
               Conforto, segurança e soluções técnicas para o seu ambiente.
             </h1>
 
+            {/* TEXTO */}
             <p
               className="
                 mt-6
                 max-w-[540px]
                 text-[15px]
                 leading-6
-                text-white/70
+                text-white/72
                 sm:text-base
                 sm:leading-7
               "
@@ -154,12 +224,14 @@ export function Hero() {
               uma execução bem feita.
             </p>
 
+            {/* CTAS */}
             <motion.div
               className="
-                mt-9
+                mt-8
                 flex
                 flex-col
                 gap-3
+                sm:mt-9
                 sm:flex-row
                 sm:items-center
                 lg:mt-10
@@ -184,6 +256,7 @@ export function Hero() {
                 className="
                   inline-flex
                   min-h-12
+                  w-full
                   items-center
                   justify-center
                   rounded-lg
@@ -192,6 +265,7 @@ export function Hero() {
                   text-sm
                   font-bold
                   text-white
+                  shadow-[0_10px_28px_rgba(255,121,0,.16)]
                   transition-all
                   duration-200
                   hover:-translate-y-0.5
@@ -208,41 +282,53 @@ export function Hero() {
                 className="
                   inline-flex
                   min-h-12
+                  w-full
                   items-center
                   justify-center
                   rounded-lg
                   border
                   border-white/20
+                  bg-white/[0.02]
                   px-6
                   text-sm
                   font-semibold
                   text-white/82
+                  backdrop-blur-[2px]
                   transition-all
                   duration-200
                   hover:border-white/40
-                  hover:bg-white/[0.05]
+                  hover:bg-white/[0.06]
                   hover:text-white
+                  sm:w-auto
                 "
               >
                 Conhecer soluções
               </a>
             </motion.div>
 
+            {/* INFORMAÇÕES */}
             <motion.div
               className="
                 mt-6
                 flex
-                flex-wrap
-                items-center
-                gap-x-5
-                gap-y-2
+                flex-col
+                items-start
+                gap-2
                 text-xs
                 font-semibold
                 text-white/48
+                sm:flex-row
+                sm:flex-wrap
+                sm:items-center
+                sm:gap-x-5
                 lg:mt-7
               "
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
               transition={{
                 duration: 0.6,
                 delay: 0.55,

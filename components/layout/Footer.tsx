@@ -1,10 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { site } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="bg-[#061b5c] text-white">
+    <footer className="bg-[#2A2D80] text-white">
       <div className="shell py-10 sm:py-12 lg:py-14">
         <div className="grid gap-10 md:grid-cols-12 md:gap-8">
           {/* MARCA */}
@@ -12,35 +13,22 @@ export function Footer() {
             <Link
               href="/#inicio"
               aria-label="Soares Climatização e Soluções Elétricas - início"
-              className="
-                inline-flex
-                flex-col
-                leading-none
-              "
+              className="inline-flex items-center"
             >
-              <span
+              <Image
+                src="/images/logo/soares-logo-footer.png"
+                alt="Soares Climatização e Soluções Elétricas"
+                width={1023}
+                height={575}
                 className="
-                  text-2xl
-                  font-black
-                  tracking-[-0.045em]
-                  text-white
+                  h-auto
+                  w-full
+                  max-w-[300px]
+                  object-contain
+                  sm:max-w-[340px]
+                  lg:max-w-[370px]
                 "
-              >
-                SOARES
-              </span>
-
-              <span
-                className="
-                  mt-1.5
-                  text-[10px]
-                  font-bold
-                  uppercase
-                  tracking-[0.1em]
-                  text-[#ff7900]
-                "
-              >
-                Climatização & Soluções Elétricas
-              </span>
+              />
             </Link>
 
             <p
@@ -77,78 +65,42 @@ export function Footer() {
             >
               <Link
                 href="/#servicos"
-                className="
-                  w-fit
-                  text-sm
-                  text-white/62
-                  transition-colors
-                  hover:text-white
-                "
+                className="w-fit text-sm text-white/62 transition-colors hover:text-white"
               >
                 Climatização
               </Link>
 
               <Link
                 href="/#solucoes-eletricas"
-                className="
-                  w-fit
-                  text-sm
-                  text-white/62
-                  transition-colors
-                  hover:text-white
-                "
+                className="w-fit text-sm text-white/62 transition-colors hover:text-white"
               >
                 Soluções Elétricas
               </Link>
 
               <Link
                 href="/catalogo"
-                className="
-                  w-fit
-                  text-sm
-                  text-white/62
-                  transition-colors
-                  hover:text-white
-                "
+                className="w-fit text-sm text-white/62 transition-colors hover:text-white"
               >
                 Catálogo
               </Link>
 
               <Link
                 href="/#como-funciona"
-                className="
-                  w-fit
-                  text-sm
-                  text-white/62
-                  transition-colors
-                  hover:text-white
-                "
+                className="w-fit text-sm text-white/62 transition-colors hover:text-white"
               >
                 Atendimento
               </Link>
 
               <Link
                 href="/#duvidas"
-                className="
-                  w-fit
-                  text-sm
-                  text-white/62
-                  transition-colors
-                  hover:text-white
-                "
+                className="w-fit text-sm text-white/62 transition-colors hover:text-white"
               >
                 Dúvidas
               </Link>
 
               <Link
                 href="/#contato"
-                className="
-                  w-fit
-                  text-sm
-                  text-white/62
-                  transition-colors
-                  hover:text-white
-                "
+                className="w-fit text-sm text-white/62 transition-colors hover:text-white"
               >
                 Contato
               </Link>
@@ -170,9 +122,7 @@ export function Footer() {
             </p>
 
             <div className="mt-5 space-y-3 text-sm">
-              <p className="text-white/62">
-                {site.region}
-              </p>
+              <p className="text-white/62">{site.region}</p>
 
               <a
                 href={`https://wa.me/${site.whatsapp}`}
@@ -234,11 +184,7 @@ export function Footer() {
             href="https://www.base48digital.com.br/"
             target="_blank"
             rel="noreferrer"
-            className="
-              w-fit
-              transition-colors
-              hover:text-white/65
-            "
+            className="w-fit transition-colors hover:text-white/65"
           >
             Desenvolvido por Base48 Digital
           </a>

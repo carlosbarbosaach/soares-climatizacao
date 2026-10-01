@@ -7,6 +7,7 @@ __turbopack_context__.s([
     ()=>Header
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
@@ -14,6 +15,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$Whatsapp
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 ;
 ;
@@ -176,35 +178,29 @@ function Header() {
             transition-all
             duration-300
 
-            ${scrolled || !isHome ? "h-[72px] border-transparent" : "h-20 border-b border-white/20"}
+            ${scrolled || !isHome ? "h-[76px] border-transparent" : "h-[84px] border-b border-white/20"}
           `,
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             href: "/#inicio",
                             onClick: ()=>handleNavigate("#inicio"),
                             "aria-label": "Soares Climatização e Soluções Elétricas - início",
-                            className: "\n              focus-ring\n              flex\n              shrink-0\n              flex-col\n              leading-none\n            ",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "\n                text-[1.15rem]\n                font-black\n                tracking-[-0.045em]\n                sm:text-xl\n              ",
-                                    children: "SOARES"
-                                }, void 0, false, {
-                                    fileName: "[project]/components/layout/Header.tsx",
-                                    lineNumber: 178,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "\n                mt-1\n                text-[8px]\n                font-bold\n                uppercase\n                tracking-[0.08em]\n                text-[#ff8a1c]\n                sm:text-[9px]\n              ",
-                                    children: "Climatização & Soluções Elétricas"
-                                }, void 0, false, {
-                                    fileName: "[project]/components/layout/Header.tsx",
-                                    lineNumber: 189,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
+                            className: "\n              focus-ring\n              flex\n              shrink-0\n              items-center\n            ",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                src: "/images/logo/soares-logo.png",
+                                alt: "Soares Climatização e Soluções Elétricas",
+                                width: 1432,
+                                height: 477,
+                                priority: true,
+                                className: "\n                h-[44px]\n                w-auto\n                object-contain\n                sm:h-[48px]\n                lg:h-[50px]\n                xl:h-[54px]\n              "
+                            }, void 0, false, {
+                                fileName: "[project]/components/layout/Header.tsx",
+                                lineNumber: 178,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
                             fileName: "[project]/components/layout/Header.tsx",
-                            lineNumber: 164,
+                            lineNumber: 165,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -245,19 +241,19 @@ function Header() {
                     `
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/Header.tsx",
-                                            lineNumber: 250,
+                                            lineNumber: 241,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, href, true, {
                                     fileName: "[project]/components/layout/Header.tsx",
-                                    lineNumber: 224,
+                                    lineNumber: 215,
                                     columnNumber: 17
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/components/layout/Header.tsx",
-                            lineNumber: 205,
+                            lineNumber: 196,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -269,7 +265,7 @@ function Header() {
                                     children: "Ver catálogo"
                                 }, void 0, false, {
                                     fileName: "[project]/components/layout/Header.tsx",
-                                    lineNumber: 281,
+                                    lineNumber: 272,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$WhatsappLink$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["WhatsappLink"], {
@@ -279,13 +275,13 @@ function Header() {
                                     children: "Pedir orçamento"
                                 }, void 0, false, {
                                     fileName: "[project]/components/layout/Header.tsx",
-                                    lineNumber: 307,
+                                    lineNumber: 298,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/layout/Header.tsx",
-                            lineNumber: 273,
+                            lineNumber: 264,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -301,7 +297,7 @@ function Header() {
                                     children: open ? "Fechar menu" : "Abrir menu"
                                 }, void 0, false, {
                                     fileName: "[project]/components/layout/Header.tsx",
-                                    lineNumber: 355,
+                                    lineNumber: 346,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -322,7 +318,7 @@ function Header() {
                 `
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/Header.tsx",
-                                            lineNumber: 369,
+                                            lineNumber: 360,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -339,7 +335,7 @@ function Header() {
                 `
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/Header.tsx",
-                                            lineNumber: 388,
+                                            lineNumber: 379,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -357,30 +353,30 @@ function Header() {
                 `
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/Header.tsx",
-                                            lineNumber: 406,
+                                            lineNumber: 397,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/layout/Header.tsx",
-                                    lineNumber: 361,
+                                    lineNumber: 352,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/layout/Header.tsx",
-                            lineNumber: 332,
+                            lineNumber: 323,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/layout/Header.tsx",
-                    lineNumber: 147,
+                    lineNumber: 148,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/layout/Header.tsx",
-                lineNumber: 119,
+                lineNumber: 120,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -401,7 +397,7 @@ function Header() {
         `
             }, void 0, false, {
                 fileName: "[project]/components/layout/Header.tsx",
-                lineNumber: 430,
+                lineNumber: 421,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -435,69 +431,63 @@ function Header() {
                         className: "\n            pointer-events-none\n            absolute\n            inset-x-0\n            top-0\n            h-44\n            bg-[radial-gradient(circle_at_75%_0%,rgba(255,255,255,.10),transparent_52%)]\n          "
                     }, void 0, false, {
                         fileName: "[project]/components/layout/Header.tsx",
-                        lineNumber: 484,
+                        lineNumber: 475,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "\n            relative\n            z-10\n            flex\n            h-20\n            items-center\n            justify-between\n            border-b\n            border-white/10\n            px-5\n          ",
+                        className: "\n            relative\n            z-10\n            flex\n            h-[86px]\n            items-center\n            justify-between\n            border-b\n            border-white/10\n            px-5\n          ",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: "/#inicio",
                                 onClick: ()=>handleNavigate("#inicio"),
-                                className: "\n              flex\n              flex-col\n              leading-none\n            ",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "\n                text-lg\n                font-black\n                tracking-[-0.04em]\n              ",
-                                        children: "SOARES"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/layout/Header.tsx",
-                                        lineNumber: 521,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "\n                mt-1\n                text-[8px]\n                font-bold\n                uppercase\n                tracking-[0.08em]\n                text-[#ff8a1c]\n              ",
-                                        children: "Climatização & Soluções Elétricas"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/layout/Header.tsx",
-                                        lineNumber: 531,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                                "aria-label": "Soares Climatização e Soluções Elétricas - início",
+                                className: "\n              flex\n              min-w-0\n              items-center\n            ",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    src: "/images/logo/soares-logo.png",
+                                    alt: "Soares Climatização e Soluções Elétricas",
+                                    width: 1432,
+                                    height: 477,
+                                    className: "\n                h-[47px]\n                w-auto\n                max-w-[245px]\n                object-contain\n              "
+                                }, void 0, false, {
+                                    fileName: "[project]/components/layout/Header.tsx",
+                                    lineNumber: 514,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
                                 fileName: "[project]/components/layout/Header.tsx",
-                                lineNumber: 510,
+                                lineNumber: 502,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 type: "button",
                                 "aria-label": "Fechar menu",
                                 onClick: ()=>setOpen(false),
-                                className: "\n              focus-ring\n              relative\n              h-10\n              w-10\n            ",
+                                className: "\n              focus-ring\n              relative\n              ml-3\n              h-10\n              w-10\n              shrink-0\n            ",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "\n                absolute\n                left-1/2\n                top-1/2\n                h-[2px]\n                w-5\n                -translate-x-1/2\n                -translate-y-1/2\n                rotate-45\n                bg-white\n              "
                                     }, void 0, false, {
                                         fileName: "[project]/components/layout/Header.tsx",
-                                        lineNumber: 558,
+                                        lineNumber: 544,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "\n                absolute\n                left-1/2\n                top-1/2\n                h-[2px]\n                w-5\n                -translate-x-1/2\n                -translate-y-1/2\n                -rotate-45\n                bg-white\n              "
                                     }, void 0, false, {
                                         fileName: "[project]/components/layout/Header.tsx",
-                                        lineNumber: 572,
+                                        lineNumber: 558,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/layout/Header.tsx",
-                                lineNumber: 545,
+                                lineNumber: 529,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/layout/Header.tsx",
-                        lineNumber: 497,
+                        lineNumber: 488,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -532,19 +522,19 @@ function Header() {
                                                 className: "\n                        absolute\n                        bottom-[-1px]\n                        left-0\n                        h-[2px]\n                        w-12\n                        bg-[#ff7900]\n                      "
                                             }, void 0, false, {
                                                 fileName: "[project]/components/layout/Header.tsx",
-                                                lineNumber: 638,
+                                                lineNumber: 624,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, href, true, {
                                         fileName: "[project]/components/layout/Header.tsx",
-                                        lineNumber: 610,
+                                        lineNumber: 596,
                                         columnNumber: 17
                                     }, this);
                                 })
                             }, void 0, false, {
                                 fileName: "[project]/components/layout/Header.tsx",
-                                lineNumber: 600,
+                                lineNumber: 586,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -554,7 +544,7 @@ function Header() {
                                 children: "Ver catálogo"
                             }, void 0, false, {
                                 fileName: "[project]/components/layout/Header.tsx",
-                                lineNumber: 655,
+                                lineNumber: 641,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$WhatsappLink$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["WhatsappLink"], {
@@ -564,13 +554,13 @@ function Header() {
                                 children: "Pedir orçamento"
                             }, void 0, false, {
                                 fileName: "[project]/components/layout/Header.tsx",
-                                lineNumber: 684,
+                                lineNumber: 670,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/layout/Header.tsx",
-                        lineNumber: 589,
+                        lineNumber: 575,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -580,24 +570,24 @@ function Header() {
                             children: "Climatização, soluções elétricas e equipamentos para residências e empresas."
                         }, void 0, false, {
                             fileName: "[project]/components/layout/Header.tsx",
-                            lineNumber: 712,
+                            lineNumber: 698,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/layout/Header.tsx",
-                        lineNumber: 701,
+                        lineNumber: 687,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/layout/Header.tsx",
-                lineNumber: 453,
+                lineNumber: 444,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/layout/Header.tsx",
-        lineNumber: 118,
+        lineNumber: 119,
         columnNumber: 5
     }, this);
 }
@@ -1315,10 +1305,46 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$site$2e$ts__$5b$app$2
 function Hero() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "inicio",
-        className: "\n        relative\n        min-h-[680px]\n        overflow-hidden\n        bg-[#061b5c]\n        text-white\n        md:min-h-[740px]\n        lg:min-h-[780px]\n      ",
+        className: "\n        relative\n        min-h-[720px]\n        overflow-hidden\n        bg-[#061b5c]\n        text-white\n        md:min-h-[740px]\n        lg:min-h-[780px]\n      ",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["motion"].div, {
-                className: "absolute inset-0",
+                className: "\n          absolute\n          inset-0\n          md:hidden\n        ",
+                initial: {
+                    opacity: 0,
+                    scale: 1.025
+                },
+                animate: {
+                    opacity: 1,
+                    scale: 1
+                },
+                transition: {
+                    duration: 1.1,
+                    ease: [
+                        0.22,
+                        1,
+                        0.36,
+                        1
+                    ]
+                },
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                    src: "/images/hero-banner-mobile.png",
+                    alt: "Profissional realizando serviço técnico de climatização",
+                    fill: true,
+                    priority: true,
+                    sizes: "100vw",
+                    className: "\n            object-cover\n            object-center\n          "
+                }, void 0, false, {
+                    fileName: "[project]/components/sections/Hero.tsx",
+                    lineNumber: 43,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/components/sections/Hero.tsx",
+                lineNumber: 24,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["motion"].div, {
+                className: "\n          absolute\n          inset-0\n          hidden\n          md:block\n        ",
                 initial: {
                     opacity: 0,
                     scale: 1.025
@@ -1342,35 +1368,49 @@ function Hero() {
                     fill: true,
                     priority: true,
                     sizes: "100vw",
-                    className: "\n            object-cover\n            object-[66%_center]\n            sm:object-[64%_center]\n            lg:object-center\n          "
+                    className: "\n            object-cover\n            object-[64%_center]\n            lg:object-center\n          "
                 }, void 0, false, {
                     fileName: "[project]/components/sections/Hero.tsx",
-                    lineNumber: 39,
+                    lineNumber: 77,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/sections/Hero.tsx",
-                lineNumber: 24,
+                lineNumber: 57,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "\n          absolute\n          inset-0\n          bg-[linear-gradient(90deg,rgba(5,24,81,.98)_0%,rgba(5,24,81,.95)_28%,rgba(5,24,81,.82)_45%,rgba(5,24,81,.40)_62%,rgba(5,24,81,.08)_100%)]\n        "
+                className: "\n          absolute\n          inset-0\n          bg-[linear-gradient(180deg,rgba(5,24,81,.78)_0%,rgba(5,24,81,.72)_24%,rgba(5,24,81,.82)_55%,rgba(5,24,81,.96)_100%)]\n          md:hidden\n        "
             }, void 0, false, {
                 fileName: "[project]/components/sections/Hero.tsx",
-                lineNumber: 55,
+                lineNumber: 92,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "\n          absolute\n          inset-x-0\n          bottom-0\n          h-44\n          bg-[linear-gradient(180deg,transparent,rgba(5,24,81,.72))]\n        "
+                className: "\n          absolute\n          inset-0\n          hidden\n          md:block\n          md:bg-[linear-gradient(90deg,rgba(5,24,81,.98)_0%,rgba(5,24,81,.95)_28%,rgba(5,24,81,.82)_45%,rgba(5,24,81,.40)_62%,rgba(5,24,81,.08)_100%)]\n        "
             }, void 0, false, {
                 fileName: "[project]/components/sections/Hero.tsx",
-                lineNumber: 64,
+                lineNumber: 102,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "\n          shell\n          relative\n          flex\n          min-h-[680px]\n          items-center\n          pt-24\n          md:min-h-[740px]\n          md:pt-20\n          lg:min-h-[780px]\n          lg:pt-16\n        ",
+                className: "\n          absolute\n          inset-y-0\n          left-0\n          w-[78%]\n          bg-[linear-gradient(90deg,rgba(5,24,81,.68)_0%,rgba(5,24,81,.35)_62%,transparent_100%)]\n          md:hidden\n        "
+            }, void 0, false, {
+                fileName: "[project]/components/sections/Hero.tsx",
+                lineNumber: 113,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "\n          absolute\n          inset-x-0\n          bottom-0\n          h-48\n          bg-[linear-gradient(180deg,transparent,rgba(5,24,81,.82))]\n          md:h-44\n          md:bg-[linear-gradient(180deg,transparent,rgba(5,24,81,.72))]\n        "
+            }, void 0, false, {
+                fileName: "[project]/components/sections/Hero.tsx",
+                lineNumber: 125,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "\n          shell\n          relative\n          flex\n          min-h-[720px]\n          items-center\n          pt-28\n          md:min-h-[740px]\n          md:pt-20\n          lg:min-h-[780px]\n          lg:pt-16\n        ",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "\n            max-w-[640px]\n            -translate-y-4\n            md:-translate-y-6\n            lg:-translate-y-8\n          ",
+                    className: "\n            w-full\n            max-w-[640px]\n            -translate-y-1\n            md:-translate-y-6\n            lg:-translate-y-8\n          ",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["motion"].div, {
                         initial: {
                             opacity: 0,
@@ -1392,14 +1432,14 @@ function Hero() {
                         },
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "\n                mb-4\n                text-[10px]\n                font-bold\n                uppercase\n                tracking-[0.2em]\n                text-[#ff8a1c]\n                sm:text-[11px]\n              ",
+                                className: "\n                mb-4\n                max-w-[320px]\n                text-[10px]\n                font-bold\n                uppercase\n                leading-[1.6]\n                tracking-[0.2em]\n                text-[#ff8a1c]\n                sm:max-w-none\n                sm:text-[11px]\n              ",
                                 children: [
                                     "Climatização & soluções elétricas em ",
                                     __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$site$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["site"].region
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/sections/Hero.tsx",
-                                lineNumber: 112,
+                                lineNumber: 177,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -1407,19 +1447,19 @@ function Hero() {
                                 children: "Conforto, segurança e soluções técnicas para o seu ambiente."
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/Hero.tsx",
-                                lineNumber: 126,
+                                lineNumber: 195,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "\n                mt-6\n                max-w-[540px]\n                text-[15px]\n                leading-6\n                text-white/70\n                sm:text-base\n                sm:leading-7\n              ",
+                                className: "\n                mt-6\n                max-w-[540px]\n                text-[15px]\n                leading-6\n                text-white/72\n                sm:text-base\n                sm:leading-7\n              ",
                                 children: "Serviços de climatização e soluções elétricas para residências e empresas em Bombinhas e região, com atendimento direto e foco em uma execução bem feita."
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/Hero.tsx",
-                                lineNumber: 141,
+                                lineNumber: 211,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["motion"].div, {
-                                className: "\n                mt-9\n                flex\n                flex-col\n                gap-3\n                sm:flex-row\n                sm:items-center\n                lg:mt-10\n              ",
+                                className: "\n                mt-8\n                flex\n                flex-col\n                gap-3\n                sm:mt-9\n                sm:flex-row\n                sm:items-center\n                lg:mt-10\n              ",
                                 initial: {
                                     opacity: 0,
                                     y: 16
@@ -1442,30 +1482,30 @@ function Hero() {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$WhatsappLink$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["WhatsappLink"], {
                                         source: "hero",
                                         message: "Olá! Encontrei a Soares Climatização e Soluções Elétricas pelo site e gostaria de solicitar um orçamento.",
-                                        className: "\n                  inline-flex\n                  min-h-12\n                  items-center\n                  justify-center\n                  rounded-lg\n                  bg-[#ff7900]\n                  px-7\n                  text-sm\n                  font-bold\n                  text-white\n                  transition-all\n                  duration-200\n                  hover:-translate-y-0.5\n                  hover:bg-[#ff8a1c]\n                  hover:shadow-[0_10px_30px_rgba(255,121,0,.24)]\n                  sm:w-auto\n                ",
+                                        className: "\n                  inline-flex\n                  min-h-12\n                  w-full\n                  items-center\n                  justify-center\n                  rounded-lg\n                  bg-[#ff7900]\n                  px-7\n                  text-sm\n                  font-bold\n                  text-white\n                  shadow-[0_10px_28px_rgba(255,121,0,.16)]\n                  transition-all\n                  duration-200\n                  hover:-translate-y-0.5\n                  hover:bg-[#ff8a1c]\n                  hover:shadow-[0_10px_30px_rgba(255,121,0,.24)]\n                  sm:w-auto\n                ",
                                         children: "Solicitar orçamento"
                                     }, void 0, false, {
                                         fileName: "[project]/components/sections/Hero.tsx",
-                                        lineNumber: 181,
+                                        lineNumber: 253,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                         href: "#servicos",
-                                        className: "\n                  inline-flex\n                  min-h-12\n                  items-center\n                  justify-center\n                  rounded-lg\n                  border\n                  border-white/20\n                  px-6\n                  text-sm\n                  font-semibold\n                  text-white/82\n                  transition-all\n                  duration-200\n                  hover:border-white/40\n                  hover:bg-white/[0.05]\n                  hover:text-white\n                ",
+                                        className: "\n                  inline-flex\n                  min-h-12\n                  w-full\n                  items-center\n                  justify-center\n                  rounded-lg\n                  border\n                  border-white/20\n                  bg-white/[0.02]\n                  px-6\n                  text-sm\n                  font-semibold\n                  text-white/82\n                  backdrop-blur-[2px]\n                  transition-all\n                  duration-200\n                  hover:border-white/40\n                  hover:bg-white/[0.06]\n                  hover:text-white\n                  sm:w-auto\n                ",
                                         children: "Conhecer soluções"
                                     }, void 0, false, {
                                         fileName: "[project]/components/sections/Hero.tsx",
-                                        lineNumber: 206,
+                                        lineNumber: 280,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/sections/Hero.tsx",
-                                lineNumber: 157,
+                                lineNumber: 228,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["motion"].div, {
-                                className: "\n                mt-6\n                flex\n                flex-wrap\n                items-center\n                gap-x-5\n                gap-y-2\n                text-xs\n                font-semibold\n                text-white/48\n                lg:mt-7\n              ",
+                                className: "\n                mt-6\n                flex\n                flex-col\n                items-start\n                gap-2\n                text-xs\n                font-semibold\n                text-white/48\n                sm:flex-row\n                sm:flex-wrap\n                sm:items-center\n                sm:gap-x-5\n                lg:mt-7\n              ",
                                 initial: {
                                     opacity: 0
                                 },
@@ -1484,7 +1524,7 @@ function Hero() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/sections/Hero.tsx",
-                                        lineNumber: 251,
+                                        lineNumber: 337,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1492,36 +1532,36 @@ function Hero() {
                                         className: "\n                  hidden\n                  h-1\n                  w-1\n                  rounded-full\n                  bg-[#ff7900]\n                  sm:block\n                "
                                     }, void 0, false, {
                                         fileName: "[project]/components/sections/Hero.tsx",
-                                        lineNumber: 255,
+                                        lineNumber: 341,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "Atendimento residencial e empresarial"
                                     }, void 0, false, {
                                         fileName: "[project]/components/sections/Hero.tsx",
-                                        lineNumber: 267,
+                                        lineNumber: 353,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/sections/Hero.tsx",
-                                lineNumber: 231,
+                                lineNumber: 310,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/sections/Hero.tsx",
-                        lineNumber: 97,
+                        lineNumber: 161,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/sections/Hero.tsx",
-                    lineNumber: 89,
+                    lineNumber: 152,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/sections/Hero.tsx",
-                lineNumber: 75,
+                lineNumber: 138,
                 columnNumber: 7
             }, this)
         ]

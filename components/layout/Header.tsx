@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -155,12 +156,12 @@ export function Header() {
 
             ${
               scrolled || !isHome
-                ? "h-[72px] border-transparent"
-                : "h-20 border-b border-white/20"
+                ? "h-[76px] border-transparent"
+                : "h-[84px] border-b border-white/20"
             }
           `}
         >
-          {/* MARCA */}
+          {/* LOGO */}
           <Link
             href="/#inicio"
             onClick={() =>
@@ -171,34 +172,24 @@ export function Header() {
               focus-ring
               flex
               shrink-0
-              flex-col
-              leading-none
+              items-center
             "
           >
-            <span
+            <Image
+              src="/images/logo/soares-logo.png"
+              alt="Soares Climatização e Soluções Elétricas"
+              width={1432}
+              height={477}
+              priority
               className="
-                text-[1.15rem]
-                font-black
-                tracking-[-0.045em]
-                sm:text-xl
+                h-[44px]
+                w-auto
+                object-contain
+                sm:h-[48px]
+                lg:h-[50px]
+                xl:h-[54px]
               "
-            >
-              SOARES
-            </span>
-
-            <span
-              className="
-                mt-1
-                text-[8px]
-                font-bold
-                uppercase
-                tracking-[0.08em]
-                text-[#ff8a1c]
-                sm:text-[9px]
-              "
-            >
-              Climatização & Soluções Elétricas
-            </span>
+            />
           </Link>
 
           {/* NAV DESKTOP */}
@@ -499,7 +490,7 @@ export function Header() {
             relative
             z-10
             flex
-            h-20
+            h-[86px]
             items-center
             justify-between
             border-b
@@ -507,41 +498,34 @@ export function Header() {
             px-5
           "
         >
+          {/* LOGO MOBILE */}
           <Link
             href="/#inicio"
             onClick={() =>
               handleNavigate("#inicio")
             }
+            aria-label="Soares Climatização e Soluções Elétricas - início"
             className="
               flex
-              flex-col
-              leading-none
+              min-w-0
+              items-center
             "
           >
-            <span
+            <Image
+              src="/images/logo/soares-logo.png"
+              alt="Soares Climatização e Soluções Elétricas"
+              width={1432}
+              height={477}
               className="
-                text-lg
-                font-black
-                tracking-[-0.04em]
+                h-[47px]
+                w-auto
+                max-w-[245px]
+                object-contain
               "
-            >
-              SOARES
-            </span>
-
-            <span
-              className="
-                mt-1
-                text-[8px]
-                font-bold
-                uppercase
-                tracking-[0.08em]
-                text-[#ff8a1c]
-              "
-            >
-              Climatização & Soluções Elétricas
-            </span>
+            />
           </Link>
 
+          {/* FECHAR */}
           <button
             type="button"
             aria-label="Fechar menu"
@@ -551,8 +535,10 @@ export function Header() {
             className="
               focus-ring
               relative
+              ml-3
               h-10
               w-10
+              shrink-0
             "
           >
             <span
@@ -717,7 +703,8 @@ export function Header() {
               text-white/40
             "
           >
-            Climatização, soluções elétricas e equipamentos para residências e empresas.
+            Climatização, soluções elétricas e equipamentos
+            para residências e empresas.
           </p>
         </div>
       </aside>
